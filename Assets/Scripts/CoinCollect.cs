@@ -18,8 +18,10 @@ public class CoinCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Player")
+        Debug.Log("Trigger Enter");
+        if (other.name == "Player")
         {
+            Debug.Log("COLLCTED By Player");
             Destroy(gameObject);
         }
     }
