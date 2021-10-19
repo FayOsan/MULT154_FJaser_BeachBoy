@@ -12,7 +12,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnObs", 3, 2);
-        playerCtrl = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -23,7 +22,6 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObs()
     {
-        if (playerCtrl.gameOver == false)
         {
             Instantiate(obsPrefab, spawnpos, obsPrefab.transform.rotation);
         }

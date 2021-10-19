@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveLeft : MonoBehaviour
+public class MoveFoward : MonoBehaviour
 {
     public float speed;
     private PlayerController playerCtrl;
@@ -10,13 +10,12 @@ public class MoveLeft : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerCtrl = GameObject.Find("Player").GetComponent<PlayerController>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerCtrl.gameOver == false)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
